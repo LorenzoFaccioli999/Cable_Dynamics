@@ -12,13 +12,26 @@ The objective of this work is to analyze the vibrational modes and time-domain b
 
 This script solves for the natural frequencies and dynamic response of a uniform tensioned cable using **progressive and regressive wave theory**. It formulates the problem as a determinant of a boundary condition matrix, extracts modal shapes, and visualizes both static and time-varying responses. Additionally, it demonstrates the superposition of travelling waves as a dynamic solution.
 
+<p align="center">
+  <img src="GIF/cable_traveling_waves.gif" width="400"/>
+</p>
+
 ### `TensionedCable_IC.m`
 
 This version evaluates the dynamic response of a cable based on a prescribed **initial displacement profile** and zero initial velocity. The solution is obtained using a **standing wave decomposition**, where the initial condition is projected onto modal shapes. The modal contributions are then evolved in time using cosine functions. This approach highlights the orthogonality and completeness of the modal basis for reconstructing initial states.
 
+<p align="center">
+  <img src="GIF/cable_response.gif" width="400"/>
+</p>
+
+
 ### `TensionedCable_2SD.m`
 
 This script models a cable composed of **two segments with different mass per unit length**. It calculates the natural frequencies and modal shapes, accounting for the discontinuity at the midpoint. The dynamic response is also analyzed under the action of an **external harmonic force** applied at the interface between the two segments. The solution combines the wave transmission and reflection phenomena at the mass discontinuity.
+
+<p align="center">
+  <img src="GIF/cable_2SD_mode.gif" width="400"/>
+</p>
 
 ## Features
 
